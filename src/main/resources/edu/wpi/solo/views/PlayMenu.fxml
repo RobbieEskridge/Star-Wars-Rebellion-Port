@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
-
-</AnchorPane>
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="edu.wpi.solo.controllers.PlayMenuCtrl">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label prefHeight="17.0" prefWidth="207.0" text="Select your faction and cardset" GridPane.columnIndex="1" />
+      <JFXComboBox fx:id="factionComboBox" prefHeight="25.0" prefWidth="203.0" promptText="Your Faction" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="50.0" />
+         </GridPane.margin>
+      </JFXComboBox>
+      <JFXComboBox fx:id="expansionComboBox" prefHeight="25.0" prefWidth="201.0" promptText="Your Cardset (Base, expansion)" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets top="50.0" />
+         </GridPane.margin>
+      </JFXComboBox>
+      <JFXButton onAction="#startGame" prefHeight="25.0" prefWidth="201.0" text="Start" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <JFXButton onAction="#exitApp" prefHeight="25.0" prefWidth="206.0" text="Quit" GridPane.columnIndex="2" />
+      <JFXButton prefHeight="25.0" prefWidth="203.0" text="Back" />
+      <JFXButton prefHeight="25.0" prefWidth="202.0" text="Advanced Options" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <JFXButton fx:id="gameRulesButton" prefHeight="25.0" prefWidth="216.0" text="Game Rules" GridPane.rowIndex="2" />
+      <JFXCheckBox prefHeight="18.0" prefWidth="214.0" text="Enable RotE Expansion" GridPane.rowIndex="1" />
+   </children>
+</GridPane>

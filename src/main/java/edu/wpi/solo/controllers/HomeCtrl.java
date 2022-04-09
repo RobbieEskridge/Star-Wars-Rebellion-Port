@@ -1,3 +1,8 @@
 package edu.wpi.solo.controllers;
 
-public class HomeCtrl {}
+import javafx.fxml.FXML;
+
+public class HomeCtrl extends MasterCtrl {
+  @FXML
+  private void initialize() {}
+}
